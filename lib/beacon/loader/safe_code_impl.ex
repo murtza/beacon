@@ -6,5 +6,6 @@ defmodule Beacon.Loader.SafeCodeImpl do
 
   def safe_module_function?(_, :inner_content), do: true
   def safe_module_function?(_, :val), do: true
+  def safe_module_fuction?(Phoenix.LiveView.Engine, _), do: true
   def safe_module_function?(_, _), do: false
 end
